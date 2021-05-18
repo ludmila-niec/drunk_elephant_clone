@@ -1,13 +1,13 @@
-
 const mode = process.env.NODE_ENV || "development";
 
 module.exports = {
   mode: mode,
   entry: {
     main: "./src/index.js",
+    featureProduct: "./src/featureProduct.js",
   },
-  output:{
-    assetModuleFilename: "images/[name].[hash][ext][query]"
+  output: {
+    assetModuleFilename: "images/[name].[hash][ext][query]",
   },
   module: {
     rules: [
@@ -17,10 +17,8 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
-  
     ],
   },
-
 };

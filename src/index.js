@@ -1,5 +1,6 @@
 import "./styles/main.scss";
 import { revealImages, bannerSlide, cursorBlink } from "./animation/hero";
+import { animateFeatureProduct } from "./animation/featureProduct";
 
 // HERO ELEMENTS
 const whiteBlock = document.querySelector("#hero-gradient-white");
@@ -23,3 +24,4 @@ const cursorBanner = document.querySelector("#cursor-banner-animate");
 
 bannerSlide(bannerText);
 cursorBlink(cursorBanner);
+

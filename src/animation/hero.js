@@ -1,3 +1,4 @@
+import { slideXBox, slideYBox } from "./common";
 import { gsap } from "gsap/dist/gsap.min.js";
 
 export function revealImages(
@@ -8,14 +9,19 @@ export function revealImages(
   smallBlock
 ) {
   const tl = gsap.timeline();
-  return tl
-    .to(background, { xPercent: 110, duration: 1.5 })
-    .from(
-      largeContainer,
-      { opacity: 0, y: 100, scale: 1.2, duration: 0.8, ease: "power4.out" },
-      "-=1.2"
-    )
-    .to(largeBlock, { yPercent: 100 }, '-=0.5')
+
+  tl.add(slideXBox(background, 110)).from(
+    largeContainer,
+    {
+      opacity: 0,
+      yPercent: 100,
+      scale: 1.2,
+      duration: 0.8,
+      ease: "power4.out",
+    },
+    "-=1.2"
+  );
+  tl.add(slideYBox(largeBlock, 100), "-=0.5")
     .from(
       smallContainer,
       {
@@ -26,8 +32,8 @@ export function revealImages(
         ease: "power4.out",
       },
       "0"
-    )
-    .to(smallBlock, { xPercent: 200, duration: 1 }, "-=0.5");
+    );
+  tl.add(slideXBox(smallBlock, 200, { duration: 3 }), "-=1");
 }
 
 export function bannerSlide(element) {

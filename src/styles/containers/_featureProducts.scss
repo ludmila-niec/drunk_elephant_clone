@@ -4,7 +4,9 @@
   }
 
   &__wrapper {
+    position: relative;
     min-height: 30vh;
+    overflow: hidden;
     &:nth-child(1) {
       background-color: $muted-gray;
     }
@@ -17,6 +19,15 @@
     &:nth-child(4) {
       background-color: $neon-green;
     }
+
+    &--box-white {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $color-white;
+    }
   }
   &__picture {
     height: 45vh;
@@ -27,6 +38,8 @@
     object-fit: cover;
 
     & > img {
+      position: relative;
+      z-index: 5;
       height: 75%;
       width: auto;
     }
@@ -35,7 +48,8 @@
   &__content {
     &__wrapper {
       padding: 3rem;
-
+      position: relative;
+      z-index: 5;
       & > h2 {
         font-size: 2rem;
         font-weight: $font-semi-bold;
@@ -92,30 +106,28 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
-    &__wrapper{
-        height:85vh;
-        &:nth-child(3) {
-            grid-column: 2 / -1;
-          }
-          &:nth-child(4) {
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-          }
+    &__wrapper {
+      height: 85vh;
+      &:nth-child(3) {
+        grid-column: 2 / -1;
+      }
+      &:nth-child(4) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
     }
 
-    &__content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-        &__wrapper{
-            & > span{
-                font-size: 1.8rem;
-            }
+      &__wrapper {
+        & > span {
+          font-size: 1.8rem;
         }
+      }
     }
-    
   }
-
 }
