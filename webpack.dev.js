@@ -11,7 +11,7 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "dist"),
     // assetModuleFile: "images/[hash].[ext].[query]"
   },
-  devTool:"eval-cheap=source-map",
+  // devtool:"eval-cheap=source-map",
   devServer: {
     port: 8080,
     contentBase: path.resolve(__dirname, "dist"),
