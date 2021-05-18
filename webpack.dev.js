@@ -5,15 +5,17 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "development",
-  target:'web',
+  target: "web",
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
+    // assetModuleFile: "images/[hash].[ext].[query]"
   },
+  devTool:"eval-cheap=source-map",
   devServer: {
     port: 8080,
     contentBase: path.resolve(__dirname, "dist"),
-    hot: true,
+    // hot: true,
   },
   module: {
     rules: [

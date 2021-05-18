@@ -4,10 +4,114 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- preload hero images -->
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/hero-image-product.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/hero-image-detail.jpg"
+    />
+    <!-- end preload hero image -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Drunk Elephant</title>
   </head>
   <body>
-    <!-- aca va el titulo -->
-    <h1>basic setup</h1>
+    <header>
+      <nav>
+        <div class="navbar">
+          <div class="menu">
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+          </div>
+          <a href="#" id="logo-brand" class="navbar__brand">
+            <img src="./assets/logo/logo-text-DE.svg" alt="Drunk Elephant"
+          /></a>
+          <div class="navbar__actions">
+            <button>
+              <img
+                src="./assets/icons/search.svg"
+                alt="search"
+                class="icon icon--search"
+              />
+            </button>
+            <button>
+              <img
+                src="./assets/icons/shopping-bag.svg"
+                alt="shopping-bag"
+                class="icon icon--shopping-bag"
+              />
+            </button>
+            <button>
+              <img
+                src="./assets/icons/user.svg"
+                alt="user"
+                class="icon icon--user"
+              />
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="hero">
+          <div class="banner--vertical">
+            <span>Keep your friends close, and your moisturizer closer.</span>
+          </div>
+          <div class="hero__promo">
+            <strong
+              >Enjoy free ground shipping on all orders! Plus, orders $75+ get
+              2-day shipping - on us!</strong
+            >
+          </div>
+          <div class="hero__gradient">
+            <div class="hero__gradient--color-white"></div>
+          </div>
+          <div class="hero__pictures">
+            <div class="picture__container picture__container-size--lg">
+              <img
+                src="./assets/images/hero-image-product.jpg"
+                alt="koffie break"
+                class="picture__container__image"
+              />
+              <span class="picture__block picture__block-color--green"></span>
+            </div>
+            <div class="picture__container picture__container-size--sm">
+              <span class="picture__block picture__block-color--pink"></span>
+              <img
+                src="./assets/images/hero-image-detail.jpg"
+                alt="texture"
+                class="picture__container__image"
+              />
+            </div>
+          </div>
+          <div class="banner">
+            <span class="banner__text">It's Never Too latte</span>
+            <span class="banner__text">It's Never Too latte</span>
+            <span class="banner__text">It's Never Too latte</span>
+            <span class="banner__text">It's Never Too latte</span>
+          </div>
+          <div class="hero__description">
+            <p class="hero__description__paragraph">
+              Sugared Koffie Almond Milk Body Scrub uses moisturizing plant oils
+              to nourish the skin, while powdered coffee beans and brown sugar
+              crystals sweep away dead cells.
+            </p>
+            <div class="hero__description__product-name">
+              <span>Koffie Break</span><span>|</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

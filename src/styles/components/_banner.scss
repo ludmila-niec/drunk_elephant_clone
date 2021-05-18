@@ -1,0 +1,39 @@
+.banner {
+  padding: 2rem 0;
+  overflow: hidden;
+  display: flex;
+  width: max-content;
+  text-overflow: clip;
+  white-space: nowrap;
+  &__text {
+    font-size: 3rem;
+    margin: 0 1rem;
+    letter-spacing: 3px;
+  }
+}
+
+.banner--vertical{
+ display:none;
+}
+
+// MEDIA QUERY SMALL
+@media screen and (min-width: $media-sm){
+  .banner--vertical{
+    display:block;
+    position: fixed;
+    z-index: 5;
+    top:0;
+    left:0;
+    transform-origin: bottom left;
+    transform: rotate(90deg) translateX(50%);
+    padding: 1rem;
+  }
+}
+
+
+// MEDIA QUERY LARGE
+@media screen and (min-width: $media-lg){
+  .banner__text{
+    font-size:9rem;
+  }
+}
