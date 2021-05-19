@@ -3,8 +3,10 @@
 @import "./globals";
 @import "./components/navbar";
 @import "./components//banner";
-@import "./containers//hero";
+@import './components/carousel';
+@import "./containers/hero";
 @import "./containers/featureProducts";
+@import './containers/products';
 
 // @font-face {
 //   font-family: "Maven Pro";
