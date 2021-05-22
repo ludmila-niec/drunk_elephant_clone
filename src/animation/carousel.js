@@ -35,5 +35,13 @@ export function animateSlide(element, value, options) {
 
 // DESKTOP SLIDE CAROUSEL
 export function dragSlide(element, value) {
-  return gsap.to(element, { x: -value });
+  return gsap.to(element, { x: -value, duration: 1 });
+}
+
+// CURSOR ANIMATION
+export function animateCustomCursor(element, value) {
+  gsap.to(element, {
+    scale: value,
+    ease: "elastic.out(1, 1)",
+  });
 }
