@@ -184,11 +184,14 @@
       </section>
       <section>
         <!-- CAROUSEL -->
-        <div class="products">
+        <div class="products" id='products-section'>
           <div class="products__container">
-            <h2 class="products__title">the line</h2>
-            <div class="carousel">
-              <div class="carousel__wrapper">
+            <span class="products__title--overflow">
+              <h2 class="products__title" id='products-title'>the line</h2>
+            </span>
+            <div class="carousel" id='carousel-container'>
+              <div class="carousel__wrapper" id='carousel-content'>
+                <div class="carousel__wrapper--large">
                   <div class="product__wrapper">
                     <img
                       src="./assets/images/carousel/carousel-1.1.png"
@@ -253,6 +256,8 @@
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="carousel__wrapper--large">
                   <div class="product__wrapper">
                     <img
                       src="./assets/images/carousel/carousel-2.1.png"
@@ -317,6 +322,7 @@
                       </div>
                     </div>
                   </div>
+                </div>
                 </div>
             </div>
           </div>
