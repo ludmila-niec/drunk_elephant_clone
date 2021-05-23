@@ -6,6 +6,7 @@ module.exports = {
     main: "./src/index.js",
     featureProduct: "./src/featureProduct.js",
     carousel: "./src/carousel.js",
+    information: './src/information.js',
   },
   output: {
     assetModuleFilename: "images/[name].[hash][ext][query]",

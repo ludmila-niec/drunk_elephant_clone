@@ -1,0 +1,216 @@
+.information {
+  min-height: 100vh;
+  position: relative;
+  transform: translateY(20%);
+  background: $muted-light-blue;
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: $font-semi-bold;
+    padding: 4rem 2rem 2rem;
+    line-height: 2.5rem;
+  }
+  &__wrapper {
+    margin: 2rem 5rem 2rem 3rem;
+  }
+  &__box {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    & > h4 {
+      font-size: 1.2rem;
+      position: relative;
+      &::before {
+        content: "__";
+        color: $neon-pink;
+        position: absolute;
+        left: -10%;
+      }
+    }
+    &--subtitle {
+      font-size: 3rem;
+      padding: 2rem;
+      line-height: 2.5rem;
+    }
+    & > p > a {
+      color: $neon-pink;
+      text-decoration: none;
+    }
+    &--blender {
+      display: none;
+    }
+  }
+  &__decoration {
+    margin-top: -6rem;
+    margin-bottom: -5rem;
+    position: relative;
+    z-index: -1;
+    height: 300px;
+    width: 80%;
+  }
+  &__hashtag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    & > span {
+      font-size: 2rem;
+      font-weight: $font-bold;
+    }
+    & > img {
+      height: 40px;
+      width: auto;
+      margin: 2rem;
+    }
+  }
+
+  &__reviews {
+    margin: 2rem auto;
+  }
+}
+
+.reviews {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 3rem;
+  position: relative;
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    margin: 0.4rem;
+    cursor: pointer;
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+    & > img {
+      height: 60%;
+      width: 60%;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__content {
+    min-width: calc(100vw - 6rem);
+    text-align: center;
+    font-size: 1.2rem;
+    & > p {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    & > span {
+      display: block;
+      font-weight: $font-semi-bold;
+      text-transform: uppercase;
+      padding: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: $media-lg) {
+  .information {
+    transform: translateY(15%);
+
+    &__title {
+      font-size: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    &__wrapper {
+      margin: 2rem;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(4, auto);
+    }
+    &__box {
+      font-size: 1rem;
+      & > h4 {
+        font-size: 2rem;
+      }
+      &--subtitle {
+        font-size: 4rem;
+        padding: 0;
+        margin-left: 4rem;
+      }
+
+      // place item in grid
+      &--title {
+        grid-area: 1 / 1 / 2 / 4;
+      }
+      &--philosophy {
+        grid-area: 1 / 4 / 2 / 6;
+      }
+      &--culprits {
+        grid-area: 2 / 3 / 3 / 6;
+        justify-self: flex-end;
+        width: 80%;
+        padding-right: 3rem;
+      }
+      &--skincare {
+        grid-area: 3 / 1 / 4 / 4;
+        justify-self: flex-end;
+        width: 80%;
+        padding-right: 3rem;
+      }
+      &--drunk {
+        grid-area: 4 / 4 / 5 / 6;
+      }
+      &--blender {
+        grid-area: 2 / 6 / 7 / 7;
+        align-self: flex-end;
+        & > img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    &__decoration {
+      height: 400px;
+      margin-bottom: -10rem;
+    }
+
+    &__hashtag {
+      & > span {
+        font-size: 4rem;
+      }
+      & > img {
+        height: 70px;
+      }
+    }
+  }
+
+  .reviews {
+    &__content {
+      min-width: calc(100vw - 10rem);
+      font-size: 2.2rem;
+      & > p {
+        width: 40%;
+        margin: 0 auto;
+      }
+      & > span {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__arrow {
+      &--left {
+        left: 10%;
+      }
+      &--right {
+        right: 10%;
+      }
+      & > img {
+        height: 150%;
+        width: 150%;
+      }
+    }
+  }
+}
