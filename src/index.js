@@ -24,3 +24,21 @@ const cursorBanner = document.querySelector("#cursor-banner-animate");
 bannerSlide(bannerText);
 cursorBlink(cursorBanner);
 
+// NAVBAR
+const navbar = document.querySelector("#navbar");
+const logoText = document.querySelector("#logo-brand-text");
+const logoImg = document.querySelector("#logo-brand-img");
+
+const bottomOffset = navbar.offsetTop + navbar.clientHeight;
+console.log(bottomOffset);
+window.addEventListener("scroll", changeLogo);
+
+function changeLogo() {
+  if (window.pageYOffset >= bottomOffset) {
+    logoText.style.display = "none";
+    logoImg.style.display = "inline";
+  }else{
+    logoText.style.display = "inline";
+    logoImg.style.display = "none";
+  }
+}
