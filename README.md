@@ -15,6 +15,6 @@
 
 ---
 ### Referencia original y clon
-### [Original]('https://www.drunkelephant.com/)
-### [Clon]('https://www.drunk-elephant-lyiuclone.vercel.app)
+### [Original](https://www.drunkelephant.com)
+### [Clon](https://drunk-elephant-clone.vercel.app/)
 :construction: *Work in progress*
